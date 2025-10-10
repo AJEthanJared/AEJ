@@ -17,7 +17,7 @@ L.tileLayer(
 //             return { color: 'blue', fillOpacity: 0.2 }; // Customize buffer style
 //         }
 //     }).addTo(map);
-var point = turf.point([-90.54863, 14.616599]);
+var point = turf.point([0, 0]);
 var buffered = turf.buffer(point, 500, { units: "miles" });
 L.geoJSON(buffered).addTo(map);
 L.geoJSON(point).addTo(map);
