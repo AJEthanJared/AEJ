@@ -60,12 +60,8 @@ function txstPolygon(){
   var area = turf.area(polygon);
   L.geoJSON(polygon).addTo(map);
 
-  var marker = L.marker([29.89224007, -97.94454852]).addTo(map); 
-  marker.bindPopup("The area of the main TXST campus is approximately: " + area + "m²").openPopup();
-  marker.on('click', function (e) { map.setView(e.latlng, 14); })
-
   let polyLayer = L.geoJSON(polygon).addTo(map);
-  polyLayer.bindPopup("The area of the main TXST campus is approximately: " + area + "m²");
+  polyLayer.bindPopup("The area of the main TXST campus is approximately: " + area + "m²").openPopup();
 }
 
 
